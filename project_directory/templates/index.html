@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Recommendations</title>
+</head>
+<body>
+    <h1>Product Recommendations</h1>
+    <form action="/recommendations" method="post">
+        <label for="user_id">User ID:</label>
+        <input type="text" name="user_id" required>
+        <button type="submit">Get Recommendations</button>
+    </form>
+    <h2>Products:</h2>
+    <ul>
+        {% for product_id, product_name in products.items() %}
+            <li>{{ product_name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
